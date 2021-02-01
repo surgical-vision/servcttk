@@ -20,6 +20,40 @@ found [SERV-CT: A disparity dataset from CT for validation of endoscopic 3D reco
 
 ![dataset generation flowchart](doc/Flowchart.png?raw=true "Title")
 
+### Dataset format
+
+We provide 16 stereo rectified image pairs with reference disparity and depth maps. For the second experiment (samples 9-16), in addition to CT reference samples, 
+we provide reference samples from a structured light device and we call those samples RGB. The dataset is organised as as follows:
+
+```tree
+└── SERV-CT
+    ├── Experiment_1               - frames 001-008
+    │   ├── Ground_truth_CT        - The reference data using an O-arm CT scan
+    │   │   ├── DepthL             - Left image depth maps (mm depth for each pixel scaled by 256 and stored as 16 bit PNG)
+    │   │   ├── DepthR             - Right image depth maps (mm depth for each pixel scaled by 256 and stored as 16 bit PNG)
+    │   │   ├── Disparity          - left-to-right disparity (pixel disparity scaled by 256 for subpixel accuracy and stored as 16 bit PNG)
+    │   │   ├── OcclusionL         - Colour coded occlusion images
+    │   │   └── OcclusionR           (Yellow - non overlap, blue - outside the reference surface, red - not visible in the right image) 
+    │   ├── Left_rectified         - left rectified images (720x576 24-bit colour PNG)
+    │   ├── Rectified_calibration  - JSON calibration files containing P1, P2 and Q, (units are in pixels and mm)
+    │   └── Right_rectified        - right rectified images (720x576 24-bit colour PNG)
+    └── Experiment_2               - frames 009-016
+        ├── Ground_truth_CT
+        │   ├── DepthL
+        │   ├── DepthR   
+        │   ├── Disparity
+        │   ├── OcclusionL
+        │   └── OcclusionR
+        ├── Ground_truth_RGB       - The reference data using a Creaform RGB scan 
+        │   ├── DepthL
+        │   ├── DepthR
+        │   ├── Disparity
+        │   ├── OcclusionL
+        │   └── OcclusionR
+        ├── Left_rectified
+        ├── Rectified_calibration
+        └── Right_rectified
+```
 ## Changelog
 
 Because we currently do not collect email addresses when we provide a copy of the
