@@ -10,7 +10,7 @@ segmentation derived from CT. Two different ex vivo porcine samples were imaged
 using the straight and 30° endoscopes from the original classic da Vinci™
 Surgical System (Intuitive Inc., Sunnyvale, US).
 
-The dataset provides reference in both disparity and depth(Z distance between 3D
+The dataset provides reference in both disparity and depth (Z distance between 3D
 point and camera center) domain as well as occlusion images.
 
 To download the SERV-CT dataset, visit the the [project's homepage](https://www.ucl.ac.uk/interventional-surgical-sciences/serv-ct).
@@ -32,7 +32,7 @@ evaluation scripts for both disparities and depthmaps. Additionally we provide
 code to read and write disparity and depthmap files in the format used by the dataset.
 - 18/1/21 Replaced an outdated version of the SERV-CT dataset. Download the
 latest from the [project's webpage](https://www.ucl.ac.uk/interventional-surgical-sciences/serv-ct)
-- 22/12/20 The [SERV-CT paper](https://arxiv.org/abs/2012.11779) is now available to download.
+- 22/12/20 The [SERV-CT paper preprint](https://arxiv.org/abs/2012.11779) is now available to download.
 
 ## How to use
 
@@ -115,7 +115,7 @@ research report:
 ```bibtex
 @article{edwards2020serv,
   title={SERV-CT: A disparity dataset from CT for validation of endoscopic 3D reconstruction},
-  author={Edwards, PJ and Psychogyios, Dimitris and Speidel, Stefanie and Maier-Hein, Lena and Stoyanov, Danail and others},
+  author={Edwards, PJ and Psychogyios, Dimitris and Speidel, Stefanie and Maier-Hein, Lena and Stoyanov, Danail},
   journal={arXiv preprint arXiv:2012.11779},
   year={2020}
 }
